@@ -4,7 +4,7 @@ A Cloudflare worker script to handle form data and send email to website admin. 
 
 ![Contact Form](./image.png)
 
-Cloudflare worker is a free service and can be used to write lightweight scripts that can be used to enhance the functionality of your static websites. For more information about Cloudflare Workers visit [https://workers.cloudflare.com/](https://workers.cloudflare.com/)
+Cloudflare worker is a free service that can be used to run lightweight scripts in order to enhance the functionality of your static websites. For more information about Cloudflare Workers visit [https://workers.cloudflare.com/](https://workers.cloudflare.com/)
 
 [`index.js`](./index.js) is the content of the Workers script.
 
@@ -18,7 +18,7 @@ Cloudflare worker is a free service and can be used to write lightweight scripts
 
 3. [Github account](https://github.com/) (optional)
 
-4. ⭐⭐ Star the project if you find it helpful.
+4. ⭐ Star the project if you find it helpful.
 
 ### Clone 
 To use this project you will need to clone or download it. 
@@ -37,12 +37,13 @@ Wrangler will attempt to automatically open your web browser to complete the log
 
 ### Initialize the project
 Create a skeleton wrangler.toml in the project directory. This will initialize the project and prepare it for deployment.
-`$ wrangler init worker-email --type=webpack`
+```$ wrangler init worker-email --type=webpack
+```
 
 A file named `wrangler.toml` will be generated. This where all you configurations will be found.
 
 ### Setup environment variables
-Copy the environment variables bellow and paste them at the end of the file [`wrangler.toml`]
+Copy the environment variables bellow and paste them at the end of the file `wrangler.toml`
 
 ```
 [vars]
@@ -56,7 +57,7 @@ FROM = "ABCD <noreply@abc.xyz>"
 
 Replace their values as required.
 
-Use the [`wrangler-copy.toml`] file as a sample.
+Use the `wrangler-copy.toml` file as a sample.
 #### Test the project
 In order to preview your Worker, you need to configure your project by adding your `Account ID` to your project’s `wrangler.toml` file
 
@@ -67,12 +68,12 @@ account_id = "............................"
 workers_dev = true
 ```
 
-Again, use the [`wrangler-copy.toml`] file as a sample
+Again, use the `wrangler-copy.toml` file as a sample
 
 You can now test the script locally by running
 `$ wrangler dev`
 
-Your app will probably be served through `http //127.0.0.1:8787`
+Your app will probably be served through `http//127.0.0.1:8787`
 
 Send a post request to 
 ```
@@ -88,13 +89,15 @@ with body = {
 }
 ```
 
-Make sure the `origin` sending the post request is same as the `environment variable ALLOWED_ORIGIN`. This script tires to fight against CORS attacks
+Make sure the `origin` sending the post request is same as the `environment variable ALLOWED_ORIGIN`. This script tries to fight against CORS attacks
+
 If you are using trial (sandbox) version of `Mailgun` make sure to register your `ADMIN_EMAIL` as one of the receiving emails.
 ### Deploy your script
 With your project configured, you can now publish your Worker.
 
 To deploy to your *.workers.dev subdomain, run:
-`$ wrangler publish`
+```$ wrangler publish
+```
 
 ## Helpful resources
 [Cloudflare Workers Guide](https://developers.cloudflare.com/workers/get-started/guide/)
