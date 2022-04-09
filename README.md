@@ -37,7 +37,8 @@ Wrangler will attempt to automatically open your web browser to complete the log
 
 ### Initialize the project
 Create a skeleton wrangler.toml in the project directory. This will initialize the project and prepare it for deployment.
-```$ wrangler init worker-email --type=webpack
+```
+$ wrangler init worker-email --type=webpack
 ```
 
 A file named `wrangler.toml` will be generated. This where all you configurations will be found.
@@ -96,7 +97,8 @@ If you are using trial (sandbox) version of `Mailgun` make sure to register your
 With your project configured, you can now publish your Worker.
 
 To deploy to your *.workers.dev subdomain, run:
-```$ wrangler publish
+```
+$ wrangler publish
 ```
 
 ## Helpful resources
