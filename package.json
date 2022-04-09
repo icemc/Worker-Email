@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "name": "worker-email",
+  "version": "1.0.0",
+  "description": "A Cloudflare worker script to handle form data and send email to website admin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write '**/*.{js,css,json,md}'"
+  },
+  "author": "pil",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "itty-router": "^2.1.9",
+    "serverless-cloudflare-workers": "^1.2.0"
+  }
+}
